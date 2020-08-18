@@ -8,14 +8,10 @@ import eur from '../img/eur.png';
 
 
 const useApi = (listado) => {
-  //console.log(listado);
+  console.log(listado);
   // State de nuestro custom hook
   const [state, actualizarState] = useState();
 
-  //const currency = listado + "";
-  //const result = listado.resultadoo + "";
-
-  //console.log(currency);
 
   const SelectApi = () => (
     // lo que esta en seleccionar es lo que s emuestra en pantalla
@@ -31,17 +27,17 @@ const useApi = (listado) => {
               <tr>
                 <td><img src={GBP} width="20" height="20"/></td>
                 <td>GBP</td>
-                <td>{listado.CAD}</td>
+                <td>{listado.GBP}</td>
               </tr>
               <tr>
                 <td><img src={eeuu} width="20" height="20"/></td>
                 <td>USD</td>
-                <td>{listado.CAD}</td>
+                <td>{listado.USD}</td>
               </tr>
               <tr>
                 <td><img src={eur} width="20" height="20"/></td>
                 <td>EUR</td>
-                <td>{listado.CAD}</td>
+                <td>{listado.EUR}</td>
               </tr>
         </tbody>
       </table>

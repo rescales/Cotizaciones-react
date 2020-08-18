@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { addDays } from "date-fns";
 
+import "moment/locale/nl";
+
 
 
 const Label = styled.label`
@@ -25,9 +27,9 @@ const useFecha = (label) => {
 
   const SeleccionarFecha = () => (
     <Fragment>
-      <Label>{label}</Label>
-
-      <DatePicker
+      <Label>{label}</Label>     
+      
+       <DatePicker
         className="date"
         selected={stateFecha}
         onChange={(date) => actualizarStateFecha(date)}
@@ -36,6 +38,7 @@ const useFecha = (label) => {
         disabledKeyboardNavigation
         placeholderText="DD / MM / YYYY "
       />
+            
       
     </Fragment>
   );

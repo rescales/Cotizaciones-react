@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Formulario from "./components/Formulario";
 import Cotizacion from "./components/Cotizacion";
 import axios from "axios";
+import Moment from 'react-moment';
 
 const Contenedor = styled.div`
   max-width: 600px;
@@ -17,6 +18,10 @@ function App() {
   const [resultado, guardarResultado] = useState('');
   const [bandera, guardarBandera] = useState('');
   
+ // <Moment format="YYYY/MM/DD">
+ 
+  
+//</Moment>
 
   useEffect(() => {
     const cotizarMoneda = async () => {
