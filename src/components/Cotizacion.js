@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Div = styled.div``;
+const Div = styled.div`
+
+background-color: #c8d1da;
+padding:10px;
+margin-top: 2rem;
+
+`;
 
 const Parrafo = styled.p`
   font-size: 18px;
@@ -11,7 +17,7 @@ const Parrafo = styled.p`
 `;
 
 const Cotizacion = (resultado) => {
-  console.log(resultado.resultadoo);
+  console.log(resultado);
   if (resultado.resultadoo === ''){
       return null;
   }// si el resultado llega vacio no va a ejecutar nada
@@ -22,8 +28,11 @@ const Cotizacion = (resultado) => {
   const currency = resultado.monedaa + "";
   const result = resultado.resultadoo + "";
 
+  console.log(result);
+  console.log(currency);
+
   return (
-    <div>
+    <Div>
       <Parrafo>
         
         La cotizacion de la moneda
@@ -33,7 +42,7 @@ const Cotizacion = (resultado) => {
       <Parrafo>
         Tiene un valor de <span> {result}</span>
       </Parrafo>
-    </div>
+    </Div>
   );
 };
 

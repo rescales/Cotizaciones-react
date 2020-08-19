@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import styled from "@emotion/styled";
 //import { v4 as uuidv4 } from "uuid";
 import canada from '../img/canada.png';
 import GBP from '../img/united-kingdom.png';
@@ -8,7 +7,7 @@ import eur from '../img/eur.png';
 
 
 const useApi = (listado) => {
-  console.log(listado);
+  //console.log(listado);
   // State de nuestro custom hook
   const [state, actualizarState] = useState();
 
@@ -20,22 +19,22 @@ const useApi = (listado) => {
         <thead></thead>
         <tbody>
               <tr>
-                <td><img src={canada} width="20" height="20"/></td>
+                <td><img src={canada} alt="bandera" width="20" height="20"/></td>
                 <td>CAD</td>
                 <td>{listado.CAD}</td>
               </tr>
               <tr>
-                <td><img src={GBP} width="20" height="20"/></td>
+                <td><img src={GBP} alt="bandera" width="20" height="20"/></td>
                 <td>GBP</td>
                 <td>{listado.GBP}</td>
               </tr>
               <tr>
-                <td><img src={eeuu} width="20" height="20"/></td>
+                <td><img src={eeuu} alt="bandera" width="20" height="20"/></td>
                 <td>USD</td>
                 <td>{listado.USD}</td>
               </tr>
               <tr>
-                <td><img src={eur} width="20" height="20"/></td>
+                <td><img src={eur} alt="bandera" width="20" height="20"/></td>
                 <td>EUR</td>
                 <td>{listado.EUR}</td>
               </tr>

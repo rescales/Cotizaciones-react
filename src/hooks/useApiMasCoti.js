@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import styled from "@emotion/styled";
+
 //import { v4 as uuidv4 } from "uuid";
 
 
@@ -20,7 +20,7 @@ const useApiMasCoti = (listado) => {
       if (objeto.hasOwnProperty(i)) {
         var aux = `${i}`;
         var banderaOK;
-        aux == "CAD" || aux == "GBP" || aux == "USD" || aux == "EUR"
+        aux === "CAD" || aux === "GBP" || aux === "USD" || aux === "EUR"
           ? (banderaOK = false)
           : (banderaOK = true);
         if (banderaOK) {
