@@ -27,16 +27,15 @@ function App() {
     const cotizarMoneda = async () => {
       if (moneda === "" && fecha === "") return; // evito la ejecucion la primera vez
       // consultar la api para obtener la cotizacion
-      const url = `https://api.exchangeratesapi.io/2018-01-01?base=${moneda}`;
+      //const url = `https://api.exchangeratesapi.io/2018-01-01?base=${moneda}`;
       //const url = `https://api.exchangeratesapi.io/history?start_at=2018-01-01&end_at=2018-01-02&symbols=${moneda}`;
-      //const key= 'f46a3039188945f8d0211eba0d9e6b53a54b96d3';
-      //const url2= `https://api.flaticon.com/v2/?apikey=${key}`;
-      
+      const url = `https://api.exchangeratesapi.io/${fecha.toISOString().slice(0,10)}?base=${moneda}`;
+      console.log(url);      
       const resultado = await axios.get(url);
         
     
      
-      console.log(resultado.data.rates[Object.getOwnPropertyNames(resultado.data.rates)[0]]);
+      //console.log(resultado.data.rates[Object.getOwnPropertyNames(resultado.data.rates)[0]]);
 
       guardarResultado(resultado.data.rates[Object.getOwnPropertyNames(resultado.data.rates)[0]]);
       //console.log(bandera);
