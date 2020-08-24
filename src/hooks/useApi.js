@@ -16,27 +16,27 @@ const useApi = (listado) => {
     // lo que esta en seleccionar es lo que s emuestra en pantalla
     <Fragment>
 <table class="table">
-        <thead></thead>
+        
         <tbody>
               <tr>
                 <td><img src={canada} alt="bandera" width="20" height="20"/></td>
-                <td>CAD</td>
-                <td>{listado.CAD}</td>
+                <td className="moneda">CAD</td>
+                <td className="numero col-sm-3">{listado.CAD}</td>
               </tr>
               <tr>
                 <td><img src={GBP} alt="bandera" width="20" height="20"/></td>
-                <td>GBP</td>
-                <td>{listado.GBP}</td>
+                <td className="moneda">GBP</td>
+                <td className="numero col-sm-3">{listado.GBP}</td>
               </tr>
               <tr>
                 <td><img src={eeuu} alt="bandera" width="20" height="20"/></td>
-                <td>USD</td>
-                <td>{listado.USD}</td>
+                <td className="moneda">USD</td>
+                <td className="numero col-sm-3">{listado.USD}</td>
               </tr>
-              <tr>
+              <tr >
                 <td><img src={eur} alt="bandera" width="20" height="20"/></td>
-                <td>EUR</td>
-                <td>{listado.EUR}</td>
+                <td className="moneda">EUR</td>
+                <td className="numero col-sm-3">{listado.EUR}</td>
               </tr>
         </tbody>
       </table>

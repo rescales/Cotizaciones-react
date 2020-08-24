@@ -67,8 +67,8 @@ const useApiMasCoti = (listado) => {
             .map((item) => (
               <tr>
                 <td>&#x1f3f4;&#xe0067;&#xe0062;&#xe0073;&#xe0063;&#xe0074;&#xe007f;</td>
-                <td>{item.moneda}</td>
-                <td>{item.coti}</td>
+                <td className="moneda">{item.moneda}</td>
+                <td className="numero col-sm-3">{item.coti}</td>
               </tr>
             ))}
         </tbody>

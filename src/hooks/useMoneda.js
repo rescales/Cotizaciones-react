@@ -10,11 +10,18 @@ display: block;
 `;
 
 const Select = styled.select`
-width: 100%;
+width: 68%;
 display: block;
 padding: 1rem;
 -webkit-appearance: none;
 border: none;
+-webkit-box-shadow: 10px 10px 92px -19px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 92px -19px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 92px -19px rgba(0,0,0,0.75);
+
+`;
+const Option = styled.option`
+color: gray;
 
 `;
 const useMoneda = (label, stateInicial, opcionesMonedas) => {
@@ -33,7 +40,9 @@ const useMoneda = (label, stateInicial, opcionesMonedas) => {
                 onChange={ e => actualizarState(e.target.value)} 
                 value={state}
             >
-                <option value="">Moneda</option> 
+                <Option  value="">Moneda  
+               
+                </Option> 
                 {Object.keys(opcionesMonedas).map(opcion => (
                     <option key={opcion.toString()} value={opcion}>{opcion}</option>
                 ))}
@@ -47,3 +56,5 @@ const useMoneda = (label, stateInicial, opcionesMonedas) => {
 
  
 export default useMoneda;
+
+//<span class="oi oi-chevron-bottom"></span>

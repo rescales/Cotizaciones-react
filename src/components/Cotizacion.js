@@ -17,7 +17,7 @@ const Parrafo = styled.p`
 `;
 
 const Cotizacion = (resultado) => {
-  console.log(resultado);
+  //console.log(resultado);
   if (resultado.resultadoo === ''){
       return null;
   }// si el resultado llega vacio no va a ejecutar nada
@@ -28,8 +28,8 @@ const Cotizacion = (resultado) => {
   const currency = resultado.monedaa + "";
   const result = resultado.resultadoo + "";
 
-  console.log(result);
-  console.log(currency);
+ // console.log(result);
+  //console.log(currency);
 
   return (
     <Div>
@@ -38,6 +38,7 @@ const Cotizacion = (resultado) => {
         La cotizacion de la moneda
         <span> {currency}</span>
       </Parrafo>
+      
       <span> </span>
       <Parrafo>
         Tiene un valor de <span> {result}</span>

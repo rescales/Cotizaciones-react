@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { addDays } from "date-fns";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 import "moment/locale/nl";
 
@@ -14,6 +16,15 @@ const Label = styled.label`
   margin-bottom: 1rem;
   display: block;
 `;
+const CustomDatePickDiv = styled.div`
+  background-color: white;
+  border: solid 0.1em #cbd4c9;
+  border-radius: 0.25em;
+  padding: 0.3em 1.6em 0 1.6em;
+  
+  width: 190px;
+`;
+
 
 
 const useFecha = (label) => {
@@ -21,23 +32,23 @@ const useFecha = (label) => {
   //const [stateFecha, actualizarStateFecha] = useState(fecha);
   const [stateFecha, actualizarStateFecha] = useState(null);
 
-  //const today = new Date();
-  //const date1 =
-    //today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+ 
 
   const SeleccionarFecha = () => (
     <Fragment>
       <Label>{label}</Label>     
       
        <DatePicker
-        className="date"
+        className="date border-left-0"
         selected={stateFecha}
         onChange={(date) => actualizarStateFecha(date)}
         maxDate={addDays(new Date(), 0)}
         dateFormatCalendar="yyyy-MM-dd"
         disabledKeyboardNavigation
         placeholderText="DD / MM / YYYY "
+        
       />
+    
             
       
     </Fragment>
@@ -52,3 +63,17 @@ export default useFecha;
 //{(stateFecha > date1)
 //?   <p>Debe elegir una fecha correcta</p>
 //: null}
+//<i class="far fa-calendar"></i>
+
+//const CustomInput = React.forwardRef((props, ref) => {
+  //return (
+    //<CustomDatePickDiv>
+      //<label onClick={props.onClick} ref={ref}>
+       // {props.value || props.placeholder}
+      //</label>
+      //<FontAwesomeIcon icon={faCalendar} onClick={props.onClick} />
+    //</CustomDatePickDiv>
+  //);
+//});
+
+//customInput={<CustomInput />}
