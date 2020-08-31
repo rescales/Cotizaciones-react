@@ -35,7 +35,8 @@ const useMoneda = (label, stateInicial, opcionesMonedas) => {
     const Seleccionar = () => (// lo que esta en seleccionar es lo que s emuestra en pantalla 
         <Fragment>
             <Label>{label}</Label>
-            <Select
+            
+            <select className="select-css"
             //  FUNCION PARA VER LO QUE EL USUario seleciona o escribe
                 onChange={ e => actualizarState(e.target.value)} 
                 value={state}
@@ -46,7 +47,8 @@ const useMoneda = (label, stateInicial, opcionesMonedas) => {
                 {Object.keys(opcionesMonedas).map(opcion => (
                     <option key={opcion.toString()} value={opcion}>{opcion}</option>
                 ))}
-            </Select>
+            </select>
+            
         </Fragment>
     );
 

@@ -38,16 +38,19 @@ const useFecha = (label) => {
     <Fragment>
       <Label>{label}</Label>     
       
+      
        <DatePicker
-        className="date border-left-0"
+        className="date select-css1 border-left-0"
         selected={stateFecha}
         onChange={(date) => actualizarStateFecha(date)}
         maxDate={addDays(new Date(), 0)}
         dateFormatCalendar="yyyy-MM-dd"
         disabledKeyboardNavigation
-        placeholderText="DD / MM / YYYY "
-        
-      />
+        placeholderText="DD / MM / YYYY  ">
+        <i class='fa fa-calendar-o'></i>
+      </DatePicker>
+     
+      
     
             
       
@@ -77,3 +80,7 @@ export default useFecha;
 //});
 
 //customInput={<CustomInput />}
+
+
+//background-image: url('https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png'),
+    //linear-gradient(to bottom, #ffffff 0%,#ffffff 100%);
